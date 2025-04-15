@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pesan Spesial</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="layer-3">
+  <div class="overlay"></div>
+
+  <!-- Foto ngambang DI LUAR container -->
+  <img id="floatingPhoto" src="akis2.jpg" alt="Foto Dede Akis" onerror="console.error('Failed to load akis2.jpg. Check the file path.');">
+
+  <!-- Container utama -->
+  <div class="container">
+    <!-- Amplop -->
+    <div id="envelopeContainer">
+      <div id="envelope">
+        <div class="envelope-front"></div>
+        <div class="envelope-flap"></div>
+        <div id="envelopeSeal" class="envelope-seal">💖</div>
+      </div>
+      <h2 class="quiz-title envelope-title">Pesan Spesial untuk Dede Akis ❤️</h2>
+      <p class="envelope-instruction">Klik segel 💖 untuk membuka pesan spesial</p>
+    </div>
+
+    <!-- Pertanyaan -->
+    <div id="question" class="hidden">
+      <p class="quiz-desc">Dede Akis, kamu sayang aku ga?</p>
+      <p class="quiz-desc">Pilih pakai hati 🤍 karena pilihanmu menentukan perjalanan ini lanjutnya akan kemana.</p>
+      <div class="button-container">
+        <button id="yesBtn">Ya</button>
+        <button id="noBtn">Tidak</button>
+      </div>
+    </div>
+
+    <!-- Pesan manis -->
+    <div id="sweetMessage" class="hidden">
+      <p class="quiz-desc">Aku tau kok kamu sayang aku, makasih ya Dede Akis! Aku juga sayang kamu banget! 💕</p>
+    </div>
+
+    <!-- Tombol mute -->
+    <div id="musicControl">
+      <button id="muteBtn">Mute Musik</button>
+    </div>
+  </div>
+
+  <!-- Tombol di bawah kolom -->
+  <a id="nextBtn" href="layer4.html" class="hidden" onclick="checkNextPage(event)">Lanjut ke Stage Berikutnya</a>
+
+  <!-- Audio -->
+  <audio id="backgroundMusic" loop autoplay>
+    <source src="boba_date.mp3" type="audio/mpeg">
+    Browsermu tidak mendukung elemen audio.
+  </audio>
+
+  <div id="heartsContainer"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    function checkNextPage(event) {
+      fetch('layer4.html', { method: 'HEAD' })
+        .then(response => {
+          if (!response.ok) throw new Error('Layer 4 not found');
+          window.location.href = 'layer4.html';
+        })
+        .catch(err => {
+          event.preventDefault();
+          alert('Maaf, halaman Layer 4 gak ditemukan. Pastikan file layer4.html ada di folder yang benar.');
+          console.error(err);
+        });
+    }
+  </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93038bbd2ef97bcc',t:'MTc0NDYzNzMwMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

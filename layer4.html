@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layer 4 - Cerita Kita, Dede Akis</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="intro">
+    <p>Dede Akis, ini cerita kita... ❤️</p>
+    <button onclick="startBook()">Buka Buku</button>
+  </div>
+  <div id="book">
+    <div id="chapter1" class="page">
+      <h2>CHAPTER I: 18 April 2021 Hari Bersejarah</h2>
+      <div id="ch1-content"></div>
+      <button id="ch1-next" onclick="nextPage(1)" style="display: none;">Lanjut</button>
+    </div>
+    <div id="chapter2" class="page">
+      <h2>CHAPTER II: Dipisahkan Karena Terpaksa</h2>
+      <div id="ch2-content"></div>
+      <button id="ch2-next" onclick="nextPage(2)" style="display: none;">Lanjut</button>
+    </div>
+    <div id="chapter3" class="page">
+      <h2>CHAPTER III: Kamu Punya Pasangan Cowo Lain</h2>
+      <div id="ch3-content"></div>
+      <button id="ch3-next" onclick="nextPage(3)" style="display: none;">Lanjut</button>
+    </div>
+    <div id="chapter4" class="page">
+      <h2>CHAPTER IV: GENGSI</h2>
+      <div id="ch4-content"></div>
+      <button onclick="showSegment(0)" style="display: none;" id="seg0-btn">Baca Awal</button>
+      <button onclick="showSegment(1)" style="display: none;" id="seg1-btn">Baca Lagi</button>
+      <button onclick="showSegment(2)" style="display: none;" id="seg2-btn">Baca Lagi</button>
+      <button onclick="showSegment(3)" style="display: none;" id="seg3-btn">Baca Akhir</button>
+      <button id="ch4-next" onclick="nextPage(4)" style="display: none;">Lanjut</button>
+    </div>
+    <div id="chapter5" class="page">
+      <h2>CHAPTER V: Komitmen</h2>
+      <div id="ch5-content"></div>
+      <div id="question" style="display: none;">
+        <p class="pulse">Maukah kamu jadi pacarku?</p>
+        <button onclick="choose('Iya')">Iya</button>
+        <button onclick="choose('Enggak')">Enggak</button>
+      </div>
+      <div id="response"></div>
+    </div>
+  </div>
+
+  <!-- Backsound -->
+  <audio id="backgroundMusic" autoplay loop>
+    <source src="laye4.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script src="script.js"></script>
+  <script>
+    // Debug path untuk gambar
+    const img1 = new Image();
+    img1.src = 'layer43.jpeg';
+    img1.onload = () => console.log('Loaded: assets4/layer43.jpeg');
+    img1.onerror = () => console.error('Failed to load: assets4/layer43.jpeg');
+
+    // Debug CSS load
+    const cssLink = document.querySelector('link[href="layer4.css"]');
+    cssLink.onload = () => console.log('layer4.css loaded successfully');
+  </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'930a65586ee6bfe2',t:'MTc0NDcwOTEyOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

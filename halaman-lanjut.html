@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kuis Kemesraan Pasangan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="layer-2">
+  <main>
+    <h2 class="quiz-title">Kuis Kemesraan Pasangan</h2>
+    <p class="quiz-desc">Seberapa kenal kamu tentang aa Cianjur kesayanganmu ini?</p>
+
+    <form id="quizForm">
+      <div class="soal-kotak">
+        <p>1. Tim sepak bola favorit?</p>
+        <select name="q1">
+          <option value="">Pilih jawaban...</option>
+          <option value="Liverpool">Liverpool</option>
+          <option value="Barcelona">Barcelona</option>
+          <option value="Manchester United">Manchester United</option>
+          <option value="Arsenal">Arsenal</option>
+        </select>
+      </div>
+
+      <div class="soal-kotak">
+        <p>2. Tim eSports favorit?</p>
+        <select name="q2">
+          <option value="">Pilih jawaban...</option>
+          <option value="EVOS">EVOS</option>
+          <option value="RRQ">RRQ</option>
+          <option value="ONIC">ONIC</option>
+          <option value="AE">AE</option>
+        </select>
+      </div>
+
+      <div class="soal-kotak">
+        <p>3. Hobi?</p>
+        <select name="q3">
+          <option value="">Pilih jawaban...</option>
+          <option value="Memasak">Memasak</option>
+          <option value="Main game, nonton">Main game, nonton</option>
+          <option value="Olahraga">Olahraga</option>
+          <option value="Traveling">Traveling</option>
+        </select>
+      </div>
+
+      <div class="soal-kotak">
+        <p>4. Tanggal lahir?</p>
+        <select name="q4">
+          <option value="">Pilih jawaban...</option>
+          <option value="1 Januari 2000">1 Januari 2000</option>
+          <option value="7 Desember 2000">7 Desember 2000</option>
+          <option value="15 Mei 1999">15 Mei 1999</option>
+          <option value="25 Juni 2001">25 Juni 2001</option>
+        </select>
+      </div>
+
+      <div class="soal-kotak">
+        <p>5. Tempat date apa yang pengen dikunjungi?</p>
+        <select name="q5">
+          <option value="">Pilih jawaban...</option>
+          <option value="Museum date">Museum date</option>
+          <option value="Piknik di taman">Piknik di taman</option>
+          <option value="Nonton bioskop">Nonton bioskop</option>
+          <option value="Dinner romantis">Dinner romantis</option>
+        </select>
+      </div>
+
+      <div class="soal-kotak">
+        <p>6. Makanan favorit?</p>
+        <select name="q6">
+          <option value="">Pilih jawaban...</option>
+          <option value="Ayam Geprek">Ayam Geprek</option>
+          <option value="Bakso">Bakso</option>
+          <option value="Sate Padang">Sate Padang</option>
+          <option value="Seblak">Seblak</option>
+        </select>
+      </div>
+
+      <div class="soal-kotak">
+        <p>7. Jumlah kucing?</p>
+        <select name="q7">
+          <option value="">Pilih jawaban...</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+      </div>
+
+      <div class="soal-kotak">
+        <p>8. Genre film favorit?</p>
+        <select name="q8">
+          <option value="">Pilih jawaban...</option>
+          <option value="Drama">Drama</option>
+          <option value="Horor">Horor</option>
+          <option value="Komedi">Komedi</option>
+          <option value="Action">Action</option>
+        </select>
+      </div>
+
+      <div class="soal-kotak">
+        <p>9. Apa yang bikin aku tertarik sama kamu?</p>
+        <select name="q9">
+          <option value="">Pilih jawaban...</option>
+          <option value="Pintar dan pengertian">Pintar dan pengertian</option>
+          <option value="Perhatian dan humoris">Perhatian dan humoris</option>
+          <option value="Baik hati dan sabar">Baik hati dan sabar</option>
+          <option value="Kreatif dan romantis">Kreatif dan romantis</option>
+        </select>
+      </div>
+
+      <div class="soal-kotak">
+        <p>10. Apa yang jadi prioritas aku diantara kamu, RRQ, ML, streaming?</p>
+        <select name="q10">
+          <option value="">Pilih jawaban...</option>
+          <option value="Kamu, RRQ, ML, streaming">Kamu, RRQ, ML, streaming</option>
+          <option value="RRQ, streaming, kamu, ML">RRQ, streaming, kamu, ML</option>
+          <option value="ML, kamu, streaming, RRQ">ML, kamu, streaming, RRQ</option>
+          <option value="Streaming, ML, RRQ, kamu">Streaming, ML, RRQ, kamu</option>
+        </select>
+      </div>
+
+      <button type="button" onclick="submitQuiz()">Kirim Jawaban</button>
+    </form>
+
+    <div id="quizResult" class="hidden result-box">
+      <h3>Hasil Akhir Kuis Kemesraan Pasangan</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Skor</th>
+            <th>Emotikon</th>
+            <th>Kalimat</th>
+          </tr>
+        </thead>
+        <tbody id="resultBody">
+          <!-- Diisi otomatis via JS -->
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

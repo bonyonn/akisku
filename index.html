@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RAHASIA NEGARA</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Judul Glitch -->
+    <h1 id="title" data-text="RAHASIA NEGARA"></h1>
+    <p class="desc">Harap menjaga kerahasiaan. Masukkan password untuk lanjut.</p>
+
+    <!-- Input Puzzle -->
+    <input type="text" id="puzzleInput" placeholder="Masukkan nama panggilan sayang" autocomplete="off" />
+
+    <!-- Clue di bawah input -->
+    <p class="clue">❤️ Clue: 8 huruf, dua kata. Dede A... <br><i>Sisanya kamu pasti tahu, karena cuma kamu yang punya kunci buat lanjut.</i></p>
+
+    <!-- Tombol -->
+    <button id="unlockBtn" onclick="checkPuzzle()">MASUK</button>
+
+    <!-- Pesan salah -->
+    <p id="warning" class="hidden">❌ Password salah!</p>
+
+    <!-- Pesan sukses -->
+    <div id="successMessage" class="hidden">
+      <p>🎉 Selamat, Anda berhasil meretas sistem negara! Silakan masuk ke stage berikutnya.</p>
+    </div>
+  </div>
+
+  <!-- Suara klik -->
+  <audio id="klik-sound" src="https://www.fesliyanstudios.com/play-mp3/387" preload="auto"></audio>
+
+  <!-- Script JS -->
+  <script src="script.js"></script>
+  <div id="transitionOverlay" class="hidden"></div>
+</body>
+</html>
+<div id="layer2" class="hidden">
+  <h2 class="quiz-title">Kuis Kemesraan Pasangan</h2>
+  <p class="quiz-desc">Seberapa kenal kamu tentang aa Cianjur kesayanganmu ini.</p>
+  
+  <form id="quizForm">
+    <!-- Soal akan digenerate lewat JS -->
+  </form>
+
+  <button onclick="submitQuiz()" class="submit-btn">Kirim Jawaban</button>
+
+  <div id="quizResult" class="hidden result-box">
+    <h3>Hasil Akhir Kuis Kemesraan Pasangan</h3>
+    <table>
+      <thead>
+        <tr><th>Skor</th><th>Emotikon</th><th>Kalimat</th></tr>
+      </thead>
+      <tbody id="resultBody">
+        <!-- Diisi otomatis dari JS -->
+      </tbody>
+    </table>
+  </div>
+</div>
